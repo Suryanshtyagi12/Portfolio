@@ -314,33 +314,52 @@ header {
 /* ===================== */
 /* Certificates Section */
 /* ===================== */
-#certificates {
-  padding: 60px 20px;
-  background-color: var(--bg-dark);
-}
 
-#certificates h2 {
+/* Certificates Section */
+#certificates {
   text-align: center;
-  color: var(--accent);
-  margin-bottom: 40px;
+  padding: 60px 30px;
+  background-color: var(--section-bg);
 }
 
 .certificates-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 40px;
+  justify-items: center;
+  align-items: stretch;
+  margin-top: 40px;
 }
 
 .certificate-card {
-  background-color: #1a1a1a;
-  padding: 20px;
+  background-color: #0d1117;
   border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.15);
-  color: #ffff00;
+  box-shadow: 0 0 15px #00ffff33;
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.certificate-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px #00ffff66;
+}
+
+.certificate-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Keeps original shape without stretching */
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.certificate-card h3 {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
 
 /* ===================== */
 /* Education Section */
@@ -515,3 +534,4 @@ header {
 .resume-btn:hover {
   background-color: #00cccc;
 }
+
