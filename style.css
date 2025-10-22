@@ -1,4 +1,4 @@
-{
+:root{
   --bg-dark: #0d1117;
   --bg-light: #ffffff;
   --text-color: #c9d1d9;
@@ -527,4 +527,5 @@ body.light-theme {
 .resume-btn:hover {
   background-color: #00cccc;
 }
+
 
