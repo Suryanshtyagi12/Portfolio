@@ -1,25 +1,27 @@
-// Theme toggle functionality
+// 🌙 Theme toggle functionality
 const toggleBtn = document.getElementById("theme-toggle");
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("light-theme");
 });
-// Typing animation for name
-const typingElement = document.querySelector(".typing");
-const text = "Suryansh Tyagi";
-let index = 0;
 
-function typeEffect() {
-  if (index < text.length) {
-    typingElement.textContent += text.charAt(index);
-    index++;
-    setTimeout(typeEffect, 150);
+// 💬 Typing animation for name
+document.addEventListener("DOMContentLoaded", () => {
+  const typingElement = document.querySelector(".typing");
+  const text = "Suryansh Tyagi";
+  let index = 0;
+
+  function typeEffect() {
+    if (index < text.length) {
+      typingElement.textContent += text.charAt(index);
+      index++;
+      setTimeout(typeEffect, 150);
+    }
   }
-}
 
-document.addEventListener("DOMContentLoaded", typeEffect);
+  typeEffect();
+});
 
-
-// Hamburger menu toggle for responsive design
+// 🍔 Hamburger menu toggle for responsive design
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 
@@ -27,7 +29,7 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
 
-// Navbar Active Link Highlight on Click
+// 🟡 Navbar Active Link Highlight on Click
 const navItems = document.querySelectorAll('.nav-links a');
 
 navItems.forEach(link => {
@@ -42,7 +44,7 @@ navItems.forEach(link => {
   });
 });
 
-// Highlight Active Section on Scroll
+// 🟡 Highlight Active Section on Scroll
 const sections = document.querySelectorAll('section');
 
 window.addEventListener('scroll', () => {
@@ -64,7 +66,7 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// Swiper for Projects Section (with responsiveness)
+// 🌀 Swiper for Projects Section (with responsiveness)
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
@@ -89,4 +91,3 @@ var swiper = new Swiper(".mySwiper", {
     }
   }
 });
-
