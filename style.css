@@ -1,9 +1,9 @@
 :root{
-  --bg-dark: #0d1117;
+  --bg-dark: #000000;
   --bg-light: #0d1117;
   --text-color: #c9d1d9;
   --accent: #00ffff;
-  --section-bg: #1e1e1e;
+  --section-bg: #000000;
 }
 
 /* General Body Styles */
@@ -527,6 +527,7 @@ body.light-theme {
 .resume-btn:hover {
   background-color: #00cccc;
 }
+
 
 
 
