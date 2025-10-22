@@ -3,6 +3,21 @@ const toggleBtn = document.getElementById("theme-toggle");
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("light-theme");
 });
+// Typing animation for name
+const typingElement = document.querySelector(".typing");
+const text = "Suryansh Tyagi";
+let index = 0;
+
+function typeEffect() {
+  if (index < text.length) {
+    typingElement.textContent += text.charAt(index);
+    index++;
+    setTimeout(typeEffect, 150);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", typeEffect);
+
 
 // Hamburger menu toggle for responsive design
 const hamburger = document.querySelector(".hamburger");
@@ -74,3 +89,4 @@ var swiper = new Swiper(".mySwiper", {
     }
   }
 });
+
