@@ -1,3 +1,6 @@
+/* ============================================
+   Root Colors (Global Defaults)
+============================================ */
 :root {
   --bg-dark: #0d1117;
   --bg-light: #ffffff;
@@ -11,10 +14,12 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: var(--bg-dark);
   color: var(--text-color);
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Navbar Styles */
+/* ============================================
+   Navbar Styles
+============================================ */
 header {
   position: fixed;
   width: 100%;
@@ -84,19 +89,31 @@ header {
   }
 }
 
+/* ============================================
+   General Section Styles
+============================================ */
 .section {
   padding: 60px 20px;
   text-align: center;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* Home Section */
+/* ============================================
+   Home Section
+============================================ */
 #home {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* min-height: calc(100vh - 60px); */
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+#home .typing,
+#home .logo {
+  color: #00ffff;
 }
 
 .home-container {
@@ -105,21 +122,21 @@ header {
   align-items: center;
   justify-content: center;
   height: 40vh;
-  padding-top: 40px; /* Adjust this based on navbar height */
+  padding-top: 40px;
   text-align: center;
 }
 
- .profile{
+.profile {
   margin-top: 100px;
-} 
-
+}
 
 .profile-pic {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   border: 3px solid var(--accent);
-  margin-top: 20px;
+  margin: 20px auto;
+  display: block;
 }
 
 .intro h1 {
@@ -136,44 +153,39 @@ header {
   margin-right: auto;
 }
 
-.typing {
-  color: var(--accent);
+/* ============================================
+   About Section
+============================================ */
+#about {
+  background-color: #111827;
+  color: #e5e7eb;
 }
 
-/* Dark theme toggle button */
-#theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  background-color: var(--accent);
-  color: #000;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  z-index: 999;
+#about h2 {
+  color: #60a5fa;
 }
 
-body.light-theme {
-  background-color: var(--bg-light);
-  color: #000;
-}
-
-/* About Section */
 .about-box {
-  background: linear-gradient(145deg, #1a1a1a, #222);
+  background: linear-gradient(145deg, #1f2937, #111827);
   padding: 30px;
   margin: auto;
   max-width: 600px;
   border-radius: 15px;
-  box-shadow: 0 0 15px #00ffff55;
+  box-shadow: 0 0 15px #60a5fa55;
   animation: fadeInUp 1s ease forwards;
 }
 
-/* Skills Section */
+/* ============================================
+   Skills Section
+============================================ */
 #skills {
-  padding: 60px 30px;
-  text-align: center;
+  background-color: #1e1b4b;
+  color: #f5f3ff;
+}
+
+#skills h2,
+#skills h3 {
+  color: #a78bfa;
 }
 
 .skills-grid {
@@ -184,21 +196,16 @@ body.light-theme {
 }
 
 .skill-box {
-  background-color: var(--section-bg);
+  background-color: #312e81;
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 0 15px #00ffff33;
+  box-shadow: 0 0 15px #a78bfa55;
   transition: transform 0.3s ease;
 }
 
 .skill-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 20px #00ffff88;
-}
-
-.skill-box h3 {
-  color: var(--accent);
-  margin-bottom: 15px;
+  box-shadow: 0 0 20px #a78bfa88;
 }
 
 .skill-box ul {
@@ -211,11 +218,9 @@ body.light-theme {
   align-items: center;
   gap: 12px;
   margin: 10px 0;
-  color: var(--text-color);
   font-size: 16px;
 }
 
-/* Correct and consistent image sizing */
 .skill-box ul li img {
   width: 40px;
   height: 40px;
@@ -223,17 +228,17 @@ body.light-theme {
   flex-shrink: 0;
 }
 
-
-/* Projects Section */
+/* ============================================
+   Projects Section
+============================================ */
 #projects {
-  padding: 60px 20px;
-  background-color: #1e1e1e;
+  background-color: #2e1065;
+  color: #f3e8ff;
 }
 
-#projects h2 {
-  text-align: center;
-  color: var(--accent);
-  margin-bottom: 40px;
+#projects h2,
+#projects h3 {
+  color: #c084fc;
 }
 
 .projects-grid {
@@ -245,129 +250,81 @@ body.light-theme {
 }
 
 .project-card {
-  background-color: #2c2c2c;
+  background-color: #3b0764;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.15);
+  box-shadow: 0 4px 12px rgba(192, 132, 252, 0.25);
   transition: transform 0.3s ease;
-  color: #fff;
   text-align: center;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3);
-}
-
-.project-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
+  box-shadow: 0 8px 16px rgba(192, 132, 252, 0.4);
 }
 
 .project-card h3 {
-  color: var(--accent);
-}
-
-.project-card ul {
-  text-align: left;
-  padding-left: 20px;
-  margin-bottom: 10px;
-}
-
-.project-card li {
-  list-style-type: disc;
-  margin-bottom: 5px;
+  color: #c084fc;
 }
 
 .project-link {
-  color: #00ffff;
+  color: #c084fc;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
 }
 
 .project-link:hover {
-  color: #ffffff;
+  color: #fff;
 }
 
-/* Certificates Section */
+/* ============================================
+   Certificates Section
+============================================ */
 #certificates {
-  padding: 60px 20px;
-  background-color: #1e1e1e;
+  background-color: #064e3b;
+  color: #d1fae5;
 }
 
 #certificates h2 {
-  text-align: center;
-  color: var(--accent);
-  margin-bottom: 40px;
-}
-
-.certificates-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+  color: #34d399;
 }
 
 .certificate-card {
-  background-color: #2c2c2c;
+  background-color: #065f46;
   padding: 20px;
   border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 15px #34d39955;
   transition: transform 0.3s ease;
 }
 
 .certificate-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3);
-}
-
-.certificate-img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-.certificate-card h3 {
-  color: #ffffff;
-  margin-bottom: 10px;
+  box-shadow: 0 0 20px #34d39988;
 }
 
 .certificate-link {
-  color: #00ffff;
+  color: #34d399;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
 }
 
-.certificate-link:hover {
-  color: #ffffff;
-}
-
-/* Education Section */
+/* ============================================
+   Education Section
+============================================ */
 #education {
-  padding: 60px 20px;
-  background-color: #1e1e1e;
+  background-color: #7f1d1d;
+  color: #fee2e2;
 }
 
 #education h2 {
-  text-align: center;
-  color: var(--accent);
-  margin-bottom: 40px;
+  color: #f87171;
 }
 
 .timeline {
   position: relative;
   margin: 0 auto;
   padding-left: 40px;
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid #f87171;
   max-width: 600px;
 }
 
@@ -379,7 +336,7 @@ body.light-theme {
 .timeline-dot {
   width: 14px;
   height: 14px;
-  background-color: var(--accent);
+  background-color: #f87171;
   border-radius: 50%;
   position: absolute;
   left: -9px;
@@ -387,29 +344,25 @@ body.light-theme {
 }
 
 .timeline-content {
-  background: #2c2c2c;
+  background-color: #991b1b;
   padding: 15px 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 15px #f8717144;
   color: #fff;
 }
 
-.timeline-content h3 {
-  color: var(--accent);
-  margin-top: 0;
-}
-
-.timeline-content span {
-  font-size: 0.9rem;
-  color: #ccc;
-}
-
-/* Contact Section */
+/* ============================================
+   Contact Section
+============================================ */
 #contact {
+  background-color: #1e293b;
+  color: #e2e8f0;
   padding: 4rem 2rem;
   text-align: center;
-  background-color: var(--section-bg);
-  color: var(--text-color);
+}
+
+#contact h2 {
+  color: #38bdf8;
 }
 
 .contact-form {
@@ -426,7 +379,7 @@ body.light-theme {
   padding: 12px;
   border: none;
   border-radius: 10px;
-  background-color: #1e1e1e;
+  background-color: #334155;
   color: #fff;
   font-size: 1rem;
   resize: none;
@@ -434,12 +387,12 @@ body.light-theme {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  outline: 2px solid #00ffff;
+  outline: 2px solid #38bdf8;
 }
 
 .contact-form button {
   padding: 12px;
-  background-color: #00ffff;
+  background-color: #38bdf8;
   border: none;
   color: #000;
   border-radius: 8px;
@@ -449,10 +402,50 @@ body.light-theme {
 }
 
 .contact-form button:hover {
-  background-color: #00c2c2;
+  background-color: #0284c7;
 }
 
-/* Social Icons */
+/* ============================================
+   Resume Section
+============================================ */
+#resume {
+  background-color: #0f172a;
+  color: #fef9c3;
+  text-align: center;
+  padding: 60px 30px;
+}
+
+#resume h2 {
+  color: #facc15;
+}
+
+.resume-box {
+  background-color: #1e293b;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #facc1533;
+  display: inline-block;
+}
+
+.resume-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #facc15;
+  color: #000;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #eab308;
+}
+
+/* ============================================
+   Social Icons
+============================================ */
 .social-icons {
   margin-top: 20px;
   display: flex;
@@ -470,76 +463,3 @@ body.light-theme {
 .social-icons a:hover img {
   transform: scale(1.2);
 }
-.profile-pic {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 3px solid var(--accent);
-  margin: 20px auto; /* Centers the image horizontally */
-  display: block;     /* Ensures it's treated like a block-level element */
-}
-
-#contact {
-  padding: 60px 30px;
-  text-align: center;
-  background-color: var(--section-bg);
-}
-
-#contact h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: var(--accent);
-}
-
-#contact p {
-  color: var(--text-color);
-  margin-bottom: 25px;
-  font-size: 1.1rem;
-}
-
-.contact-icons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.icon-img {
-  width: 48px;
-  height: 48px;
-  transition: transform 0.3s ease;
-}
-
-.icon-img:hover {
-  transform: scale(1.2);
-}
-
-/* Resume Section */
-#resume {
-  text-align: center;
-  padding: 60px 30px;
-}
-
-.resume-box {
-  background-color: var(--section-bg);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px #00ffff33;
-  display: inline-block;
-}
-
-.resume-btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: var(--accent);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 16px;
-  margin-top: 20px;
-  transition: background-color 0.3s ease;
-}
-
-.resume-btn:hover {
-  background-color: #00cccc;
-}
-
