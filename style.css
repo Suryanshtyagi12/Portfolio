@@ -91,75 +91,94 @@ header {
   padding: 60px 20px;
   text-align: center;
 }
-
 /* Home Section */
 #home {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 80px 40px;
+  min-height: 100vh;
+  background-color: var(--bg-dark);
 }
 
 .home-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 40vh;
-  padding-top: 40px;
-  text-align: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  flex-wrap: wrap;
 }
 
-.profile {
-  margin-top: 100px;
+/* Left side (image) */
+.home-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile-pic {
-  width: 200px;
-  height: 200px;
+  width: 80%;
+  max-width: 450px; /* big image but still responsive */
+  height: auto;
   border-radius: 50%;
-  border: 3px solid var(--accent);
-  margin: 20px auto;
-  display: block;
+  border: 4px solid var(--accent);
+  box-shadow: 0 0 25px var(--accent);
+  transition: transform 0.5s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+/* Right side (text and animation) */
+.home-right {
+  flex: 1;
+  color: var(--text-color);
+  text-align: left;
+  padding: 20px 40px;
 }
 
 .intro h1 {
-  font-size: 2.5rem;
-  margin: 0;
-}
-
-.intro p {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  line-height: 1.6;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 2.8rem;
+  margin: 10px 0;
 }
 
 .typing {
-  color: var(--accent);
+  color: #ffff00; /* yellow typing text */
+  border-right: 3px solid #ffff00;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: blink 0.7s step-end infinite;
 }
 
-/* Dark Theme Toggle */
-#theme-toggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  background-color: var(--accent);
-  color: #000;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  z-index: 999;
+/* Blinking cursor animation */
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ffff00;
+  }
 }
 
-body.light-theme {
-  background-color: var(--bg-light);
-  color: #000;
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+  }
+  .home-right {
+    text-align: center;
+    padding: 20px;
+  }
+  .profile-pic {
+    width: 250px;
+    margin-bottom: 20px;
+  }
 }
+
 
 /* About Section */
 .about-box {
@@ -528,6 +547,7 @@ body.light-theme {
 .resume-btn:hover {
   background-color: #00cccc;
 }
+
 
 
 
