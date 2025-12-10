@@ -85,7 +85,7 @@ export const CONFIG = {
       title: "Vision Transformer (ViT) Built From Scratch",
       description:
         "Implemented a Vision Transformer architecture from scratch using PyTorch, including patch embeddings, attention, positional encodings, and classification pipeline.",
-      image: new URL('../assets/projects/vit.jpg', import.meta.url).href,
+      image: new URL('../assets/projects/VIT.jpg', import.meta.url).href,
       github: "https://github.com/Suryanshtyagi12/Coding-VIT-From-Scratch",
       demo: "",
       tags: ["Deep Learning", "PyTorch", "ViT", "Computer Vision"],
