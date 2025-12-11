@@ -17,7 +17,7 @@ export const CONFIG = {
       "To grow as a high-impact AI/ML and Data Science Engineer, building intelligent systems using Machine Learning, Deep Learning, and Generative AI while contributing to real-world AI innovation.",
 
     resumeLink:
-      "https://drive.google.com/file/d/1b0Nk6eZrVpsY13DTyjM_qVj3oN_8-q8E/view?usp=sharing",
+      "https://drive.google.com/file/d/1JXXjKM6QyqRutk7nzisEMQjlHGs6jHf-/view?usp=sharing",
   },
 
   social: {
