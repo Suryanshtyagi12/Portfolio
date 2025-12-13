@@ -16,7 +16,6 @@ const Contact = ({ darkMode }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-  // 🔹 SUBJECT ADDED HERE
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -46,7 +45,7 @@ const Contact = ({ darkMode }) => {
         {
           name: formData.name,
           email: formData.email,
-          subject: formData.subject, // 🔹 SUBJECT PASSED
+          subject: formData.subject,
           message: formData.message,
         },
         CONFIG.emailjs.publicKey
@@ -69,6 +68,14 @@ const Contact = ({ darkMode }) => {
       setLoading(false);
     }
   };
+
+  // 🔹 INPUT STYLE (REUSED)
+  const inputClass = `w-full p-3 rounded border focus:outline-none focus:ring-2 focus:ring-primary transition
+    ${
+      darkMode
+        ? 'bg-gray-800 border-gray-700 text-white placeholder-gray-400'
+        : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
+    }`;
 
   return (
     <section
@@ -179,7 +186,7 @@ const Contact = ({ darkMode }) => {
                   onChange={handleChange}
                   required
                   placeholder="Your Name"
-                  className="w-full p-3 rounded border"
+                  className={inputClass}
                 />
 
                 <input
@@ -189,17 +196,16 @@ const Contact = ({ darkMode }) => {
                   onChange={handleChange}
                   required
                   placeholder="Your Email"
-                  className="w-full p-3 rounded border"
+                  className={inputClass}
                 />
 
-                {/* 🔹 SUBJECT INPUT ADDED */}
                 <input
                   type="text"
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
                   placeholder="Subject"
-                  className="w-full p-3 rounded border"
+                  className={inputClass}
                 />
 
                 <textarea
@@ -209,7 +215,7 @@ const Contact = ({ darkMode }) => {
                   required
                   rows={5}
                   placeholder="Your Message"
-                  className="w-full p-3 rounded border"
+                  className={inputClass}
                 />
 
                 {status.message && (
