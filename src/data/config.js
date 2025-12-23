@@ -42,8 +42,8 @@ export const CONFIG = {
       description:
         "A multimodal AI assistant capable of extracting information from PDFs and images, and interacting through a chatbot interface. Built using LLMs, document parsers, and Streamlit.",
       image: new URL('../assets/projects/multimodel.jpg', import.meta.url).href,
-      github: "https://github.com/Suryanshtyagi12/multi-agent-multimodal-assistant",
-      demo: "",
+      github: "https://github.com/Suryanshtyagi12/multi-agent-multimodal-assistant-local",
+      demo: "https://suryanshtyagi12-multi-agent-multimoda-appuistreamlit-app-kg5o6o.streamlit.app/",
       tags: ["LLM", "LangChain", "Agents", "Streamlit", "OCR", "PDF Parsing"],
     },
 
